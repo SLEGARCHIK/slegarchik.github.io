@@ -6,7 +6,7 @@
         {
             "label": "Less",
             "type": "shell",
-            "command": "lessc less/style.less css/style.css",
+            "command": "lessc less/portfolio.less css/portfolio.css",
             "group": "build"
         }
     ]

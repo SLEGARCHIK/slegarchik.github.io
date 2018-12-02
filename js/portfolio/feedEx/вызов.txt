@@ -1,0 +1,16 @@
+function buildHabrahabr() {
+        var div = $('div[id$="widgetHabrahabr"]');
+        var rssUrl = $("div[id$='widgetHabr']").data('rssurl');
+        RssFeedsEx.returnFeedsByUrl({
+            Container: div,
+            FeedUrl: rssUrl,
+            MaxCount: 1,
+            ShowCategory: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 100
+        });
+
+        var companyName = rssUrl.split('/')[5];
+        var headerUrl = 'https://habrahabr.ru/company/' + companyName;
+        $(".header.habr").attr("onclick", "window.open('" + headerUrl + "')");
+    }
